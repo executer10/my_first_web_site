@@ -11,9 +11,17 @@
     <li><a href="2.html">CSS</a></li>
     <li><a href="3.html">JavaScript</a></li>
   </ol>
+  <p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/BE_LD62PM28"
+     title="YouTube video player"
+     frameborder="0" allow="accelerometer; autoplay;
+     clipboard-write; encrypted-media; gyroscope;
+     picture-in-picture" allowfullscreen></iframe>
+  </p>
   <h1>HTML</h1>
   <h2>h1~h6(tag)</h2>
   h1~h6 태그는 글의 제목, 중요도를 나타낸다.<br>
+  <input type="checkbox" width="100"height="100">
 
   <h2>br(tag)</h2>
   br는 줄바꿈 하는 기능을 제공해주는  태그이다. 단순히 줄바꿈'만'하는 기능이다.
@@ -26,7 +34,7 @@
   말 그대로 이미지를 추가해주는 태그이다. 태그에 이미지만 작성하면 아무런 기능을 동작시키지 못하기
   <br>바로옆에 src=" "를 작성하여 해당 이미지의 주소를 입력해준다.
   <br>그리고 그림의 크기를 지정하려면 바로 옆에 width="?%"를 적어주면된다.
-  <br><img src="\img\StarCraft.jpg" width="20%">
+  <br><img src="img\StarCraft.jpg" width="20%">
 
   <h2>li, ul, ol(tag)</h2>
   li는 목록을 만들기위한 태그이다.
@@ -63,5 +71,26 @@
   Hypertext Markup Language(HTML)</a>
   <br>페이지전환이 아닌 새 탭으로 열고싶을땐 target="_blank"를 넣어주면되고
   <br>해당 링크가 클릭하기전에 무엇인지 알고싶을땐 title="HTML5 speicification"를 적어준다.
+
+  <br> ↓↓ 체팅기능 ↓↓ 웹서버(예를들어 192.168.0.0)를 통해서만 작동한다.
+  <div id="disqus_thread"></div>
+  <script>
+      /**
+      *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+      *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+      /*
+      var disqus_config = function () {
+      this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+      };
+      */
+      (function() { // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+      s.src = 'https://web-1-jp0yybqy4q.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+      })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </body>
 <html>
