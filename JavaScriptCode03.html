@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScriptCode03</title>
+  </head>
+  <body>
+    <ol>
+      <li><a href="1.html">HTML</a></li>
+      <li><a href="2.html">CSS</a></li>
+      <li><a href="3.html">JavaScript</a></li>
+    </ol>
+    <ol>
+      <li><a href="JavaScriptCode01.html">JavaScriptCode01</a></li>
+      <li><a href="JavaScriptCode02.html">JavaScriptCode02</a></li>
+      <li><a href="JavaScriptCode03.html">JavaScriptCode03</a></li>
+    </ol>
+    <h1>중복의 제거방법</h1>
+    <p>
+      기존코드
+      < input id="night_day" type="button" value="night" onclick="<br>
+      if(document.querySelector('#night_day').value=== 'night'){<br>
+        document.querySelector('body').style.backgroundColor = 'black';<br>
+        document.querySelector('body').style.color = 'white';<br>
+        document.querySelector('#night_day').value = 'day';<br>
+      } else{<br>
+        document.querySelector('body').style.backgroundColor = 'white';<br>
+        document.querySelector('body').style.color = 'black';<br>
+        document.querySelector('#night_day').value = 'night';<br>
+      }">
+    </p>
+    <p>
+      위 코드에서 if의 document.querySelector('#night_day').value=== 'night'를 간결하게 하는방법<br>
+      < input id="night_day" type="button" value="night" onclick="<br>
+      if(this.value=== 'night'){<br>
+        document.querySelector('body').style.backgroundColor = 'black';<br>
+        document.querySelector('body').style.color = 'white';<br>
+        this.value = 'day';<br>
+      } else{<br>
+        document.querySelector('body').style.backgroundColor = 'white';<br>
+        document.querySelector('body').style.color = 'black';<br>
+        this.value = 'night';<br>
+      }"><br>
+    </p>
+    <p>
+      위 코드에서 또 document.querySelector('body')의 중복을 제거하려면<br>
+      < input id="night_day" type="button" value="night" onclick="<br>
+      var target = document.querySelector('body')<br>
+      if(this.value=== 'night'){<br>
+        target.style.backgroundColor = 'black';<br>
+        target.style.color = 'white';<br>
+        this.value = 'day';<br>
+      } else{<br>
+        target.style.backgroundColor = 'white';<br>
+        target.style.color = 'black';<br>
+        this.value = 'night';<br>
+      }">
+    </p>
+    <p>
+      var(변수) target(변수이름) = document.querySelector('body')[변수 내용저장]<br>
+      위에처럼 변수를이용해 중복이 많은코드를 간편하게 줄이는 방법이다.<br>
+    </p>
+
+    </script>
+  </body>
+</html>
